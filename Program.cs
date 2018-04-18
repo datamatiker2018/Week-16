@@ -7,10 +7,48 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             // SmartProperties()
-
-
+            // Objects()
+            // Area()
 
             Console.Read();
+        }
+
+        static void Area()
+        {
+            Calculation calc = new Calculation();
+
+            // Rectangle
+            Console.WriteLine(calc.Area(5.4, 5.2, false));
+
+            // Circle
+            Console.WriteLine(calc.Area(10));
+
+            // Circle
+            Console.WriteLine(calc.Area(5, 5));
+        }
+
+        static void Objects()
+        {
+            Dog dog = new Dog();
+
+            dog.Color = "Blue";
+            dog.Race = "Chihuahua";
+
+            dog.Bark(); // "Bark"
+
+            Dog dog2 = new Dog();
+
+            dog2.Color = "Green";
+            dog2.Race = "Goodboy";
+
+            dog2.Bark(); // "Bark"
+
+            Console.WriteLine(dog2.Fetch("stick"));
+
+            Human human = new Human(dog);
+
+            human.Name = "Julius";
+            human.BestFriend = dog2;
         }
 
         static void SmartProperties()

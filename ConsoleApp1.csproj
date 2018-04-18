@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SmartProperties\Order.cs" />
+    <Compile Include="SmartProperties\OrderLine.cs" />
+    <Compile Include="SmartProperties\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
