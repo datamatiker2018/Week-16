@@ -19,7 +19,7 @@ namespace ConsoleApp1
 
         public static void Sit()
         {
-            Console.WriteLine($"The {Race} sat down");
+            //Console.WriteLine($"The {Race} sat down");
         }
     }
 }

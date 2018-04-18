@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Area\Calculation.cs" />
+    <Compile Include="Objects\Cat.cs" />
+    <Compile Include="Objects\Colors.cs" />
+    <Compile Include="Objects\Dog.cs" />
+    <Compile Include="Objects\Human.cs" />
     <Compile Include="SmartProperties\Order.cs" />
     <Compile Include="SmartProperties\OrderLine.cs" />
     <Compile Include="SmartProperties\Product.cs" />

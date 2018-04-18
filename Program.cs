@@ -10,6 +10,12 @@ namespace ConsoleApp1
             // Objects()
             // Area()
 
+            Test test = new Test("2");
+
+            Console.WriteLine();
+
+            Test test2 = new Test(2);
+
             Console.Read();
         }
 
