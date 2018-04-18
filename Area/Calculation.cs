@@ -4,6 +4,7 @@ namespace ConsoleApp1
 {
     class Calculation
     {
+        // Bad
         public double Area(double width, double height, bool rectangle)
         {
             return width * height;
