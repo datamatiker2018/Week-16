@@ -1,11 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            // SmartProperties()
+
+
+
+            Console.Read();
+        }
+
+        static void SmartProperties()
         {
             Order order = new Order();
             OrderLine orderLine = new OrderLine();
@@ -29,53 +37,7 @@ namespace ConsoleApp1
             order.OrderLines.Add(orderLine);
             order.OrderLines.Add(orderLine2);
 
-            Console.WriteLine(order.Total); // 
-
-            Console.Read();
-        }
-    }
-
-    class Order
-    {
-        public List<OrderLine> OrderLines = new List<OrderLine>();
-
-        public decimal Total
-        {
-            get
-            {
-                decimal total = 0;
-
-                foreach (OrderLine orderLine in OrderLines)
-                {
-                    total = total + orderLine.SubTotal; 
-                }
-
-                return total;
-            }
-        }
-    }
-
-    class OrderLine
-    {
-        public Product Product;
-        public int Quantity;
-        public decimal SubTotal
-        {
-            get
-            {
-                return Product.Price * Quantity;
-            }
-        }
-    }
-
-    class Product
-    {
-        public decimal Price;
-        public string Name;
-
-        public Product()
-        {
-            Console.WriteLine("New product!");
+            Console.WriteLine(order.Total);
         }
     }
 }
