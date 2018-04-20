@@ -6,9 +6,9 @@ namespace ConsoleApp1
     {
         private int _number;
 
-        public Test(string number) 
+        public Test(string number) : this(Convert.ToInt32(number))
         {
-            _number = Convert.ToInt32(number);
+            Console.WriteLine("String");
         }
 
         public Test(int number)

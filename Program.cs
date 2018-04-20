@@ -10,13 +10,36 @@ namespace ConsoleApp1
             // Objects()
             // Area()
 
+            Console.Read();
+        }
+
+        static void Constructor()
+        {
+            // Calls int constructor first, then  
+            // performs the string constructor body
+            // This is a "chain"
             Test test = new Test("2");
-
             Console.WriteLine();
-
+            // Only calls int constructor
             Test test2 = new Test(2);
 
-            Console.Read();
+            // We'll use this later
+            Random rng = new Random();
+
+            // Call SequenceAnalyser(int[]) constructor with a new int[0] (size 0, so empty)
+            SequenceAnalyser sequenceAnalyzer1 = new SequenceAnalyser();
+            // Call SequenceAnalyser(int[]) constructor with a new int[5] (size 5, 3 values)
+            SequenceAnalyser sequenceAnalyzer2 = new SequenceAnalyser(new int[3] { 1, 2, 3 });
+            // Calls SequenceAnalyser(int[]) constructor with a new int[3] (size 3, no values),
+            // then performs 3 random insertions into the array in it's own constructor body
+            SequenceAnalyser sequenceAnalyzer3 = new SequenceAnalyser(rng, 3);
+            // Calls SequenceAnalyser(Random, int), passing it's own Random into it as the first
+            // argument, and then uses it's own Random to generate a random number to pass as
+            // the second argument. Remember that SequenceAnalyser(Random, int) calls 
+            // SequenceAnalyser(int[]), so this is a proper "chain" of constructors
+            SequenceAnalyser sequenceAnalyzer4 = new SequenceAnalyser(rng);
+
+            // See the underlying code for a better understanding
         }
 
         static void Area()
