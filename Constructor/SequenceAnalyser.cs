@@ -11,6 +11,8 @@ namespace ConsoleApp1
             Sequence = sequence;                // typically does the dirty work of actually setting
         }                                       // the typical attributes (Sequence here)
 
+        // Remember that the : this(new int[0]) is
+        // used to call another overload of the constructor!
         public SequenceAnalyser() // this(new int[0]) can be inlined with the above signature,
             : this(new int[0])    // but putting it on the next line, might help visualize how
         {                         // this(new int[0]) is simply the "first line" of the body here
