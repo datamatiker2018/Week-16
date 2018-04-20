@@ -9,6 +9,7 @@ namespace ConsoleApp1
             // SmartProperties()
             // Objects()
             // Area()
+            // Constructor()
 
             Console.Read();
         }
